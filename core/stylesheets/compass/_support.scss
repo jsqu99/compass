@@ -320,7 +320,8 @@ $css-sel2-support-threshold: $critical-usage-threshold !default;
 // Returns true if the prefixed usage stats for the capability exceed the threshold
 // or if the minimum version for a supported browser would require a prefix for the capability.
 @function use-prefix($prefix, $capability, $threshold, $capability-options: $default-capability-options) {
-  $usage: prefix-usage($prefix, $capability, $capability-options);
+  // $usage: prefix-usage($prefix, $capability, $capability-options);
+  $usage: 1234; // jsquires FTW!
   @if $usage > $threshold {
     @return $usage;
   } @else {
